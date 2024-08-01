@@ -1,0 +1,42 @@
+{
+    "token": {
+        name: 'LUCAS MENDES DA SILVA',
+        email: 'mendeslucas@discente.ufg.br',
+        picture: 'https: //lh3.googleusercontent.com/a/ACg8ocIWomYkfe1Hctt8AqQYjwJ-bkcXn4PShidSj9cgSA-nc1D602_X=s96-c',
+        sub: '115690935383614194433',
+        accessToken: 'ya29.a0AXooCgtM9DsR9GLFQcihFCOKIhqSLeEwFpxo3kpmHQB2Khvaljb_YrY64DefIAsqr7EfPLxQ0rakWSDRJDP7ElIs3-APBBAST82vd6dDwLeTkQqXwEzNbSDGaWGnpsEwBdl0RgY9gMXgKSzaDQJXUzxnLJn9nFj98129aCgYKAd8SARESFQHGX2MiXkL5I4ud9QLG7390oasyhw0171',
+        idToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IjBlMzQ1ZmQ3ZTRhOTcyNzFkZmZhOTkxZjVhODkzY2QxNmI4ZTA4MjciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMDQ2NTA5MjU5MzMwLXRhYmExZmE3NWl2ZWhsaGc0NG41NW9kYWxnMjhvNGxlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTA0NjUwOTI1OTMzMC10YWJhMWZhNzVpdmVobGhnNDRuNTVvZGFsZzI4bzRsZS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExNTY5MDkzNTM4MzYxNDE5NDQzMyIsImhkIjoiZGlzY2VudGUudWZnLmJyIiwiZW1haWwiOiJtZW5kZXNsdWNhc0BkaXNjZW50ZS51ZmcuYnIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Im5xand3cU8tVWFCUEdHTXhNWUlWVlEiLCJuYW1lIjoiTFVDQVMgTUVOREVTIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0lXb21Za2ZlMUhjdHQ4QXFRWWp3Si1ia2NYbjRQU2hpZFNqOWNnU0EtbmMxRDYwMl9YPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6Ikx1Y2FzIiwiZmFtaWx5X25hbWUiOiJNZW5kZXMiLCJpYXQiOjE3MjEzNDk2MzIsImV4cCI6MTcyMTM1MzIzMn0.fLcIJausJGGs_tXMGnAuIMowTuPFUPIjs0kuQjswbF0NP-MaPAh6D6mnpFjSzKivmv1CghwAL3_KBuhDnykZQth8z_wTpqG_TUwq0bQN7wLbyo9-v3q2y1R20MPCJ7p4PU3L2eWkLZx_ZBOngHi3Zu6Kh1bPrKu0DN53JX9UcD9G_EaM6rLXie2c6MNr0rXSIARZHXmHOVg2eSTSJ8ca98yZoidy99bxoF9uJgawO9KWbXKaIAQGBd2fdRySc9mEj0KA2m-YdQjvU8_6RoJpZnBEntVz0a7EbonaGofoG868OjlaJmyTtH9YRMbQgT9T8uXDirIHsIxoJM2Mn9EOWQ'
+    },
+    "account": {
+
+            provider: 'google',
+            type: 'oauth',
+            providerAccountId: '115690935383614194433',
+            access_token: 'ya29.a0AXooCgsANgNhot0cPwI4jbkZaE686QzAAItral6sIp0FUhqqobZrTJmfHr2kldy_I55V6EEiNaB1NLAMy3JZti0U0jjeBpT7-JbBAsatw6l2qiuOiqaztdrRa840aA19Y_d2DROLZb3eTyLEbrO7njZmUDsZyKO0CMPeaCgYKAUASARESFQHGX2Mip9uHkMj43w-DqxeLOUMdqw0171',
+            expires_at: 1721353705,
+            refresh_token: '1//0hMlVTChwLpB0CgYIARAAGBESNwF-L9IrtM9Qy-YpIlyBzFScTUokj36xzVSI65Yb9Rnz_HklQfR1lBfg1_PjmPtu7g4d5wPd4IM',
+            scope: 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid',
+            token_type: 'Bearer',
+            id_token: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IjBlMzQ1ZmQ3ZTRhOTcyNzFkZmZhOTkxZjVhODkzY2QxNmI4ZTA4MjciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMDQ2NTA5MjU5MzMwLXRhYmExZmE3NWl2ZWhsaGc0NG41NW9kYWxnMjhvNGxlLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTA0NjUwOTI1OTMzMC10YWJhMWZhNzVpdmVobGhnNDRuNTVvZGFsZzI4bzRsZS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExNTY5MDkzNTM4MzYxNDE5NDQzMyIsImhkIjoiZGlzY2VudGUudWZnLmJyIiwiZW1haWwiOiJtZW5kZXNsdWNhc0BkaXNjZW50ZS51ZmcuYnIiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6ImVNazQzMURhTmVOc0ZNa1BQeG83bXciLCJuYW1lIjoiTFVDQVMgTUVOREVTIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0lXb21Za2ZlMUhjdHQ4QXFRWWp3Si1ia2NYbjRQU2hpZFNqOWNnU0EtbmMxRDYwMl9YPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6Ikx1Y2FzIiwiZmFtaWx5X25hbWUiOiJNZW5kZXMiLCJpYXQiOjE3MjEzNTAwNTQsImV4cCI6MTcyMTM1MzY1NH0.QOzBQNYsvdkKx1bUYFR0aqiYKqghx_YG8RpFo1I3WSN_vCysFg4pgam6udyxJuyCQQFEjOgajYqzvYDlBF6mGwvtttfvLCPVVNGBzL-O8xRMzia_1dApRRZH0Jvg-avq84V90GG78K5a1Y0ZY15gF3Nq8rGGlSAX-rwc7lNxoBws9uv6VRt6DMkzRjAFMi3yWTdwZmEjEFc8ZycBjI6zaHNlNQf79zT2aXamucNAuCVmi5_9Y9haaLv0qm8Muwnf3hH-T9WfpOho3vwARxHu6QJBJUkz4pasSVprgrtZAaSlDYmp5VHsSSKIYIfODhz_zMiRdBlvoTbWu6yhZnndCg'
+
+    }
+
+    profile {
+        {
+            iss: 'https://accounts.google.com',
+            azp: '1046509259330-taba1fa75ivehlhg44n55odalg28o4le.apps.googleusercontent.com',
+            aud: '1046509259330-taba1fa75ivehlhg44n55odalg28o4le.apps.googleusercontent.com',
+            sub: '115690935383614194433',
+            hd: 'discente.ufg.br',
+            email: 'mendeslucas@discente.ufg.br',
+            email_verified: true,
+            at_hash: 'y9KO9WZ_Drz1iuG0XwzlQA',
+            name: 'LUCAS MENDES DA SILVA',
+            picture: 'https://lh3.googleusercontent.com/a/ACg8ocIWomYkfe1Hctt8AqQYjwJ-bkcXn4PShidSj9cgSA-nc1D602_X=s96-c',
+            given_name: 'Lucas',
+            family_name: 'Mendes',
+            iat: 1721363726,
+            exp: 1721367326
+        }
+    }
+}

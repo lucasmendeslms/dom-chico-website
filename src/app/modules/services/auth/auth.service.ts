@@ -1,25 +1,23 @@
-import { UserDataDto } from "../../models/dto/auth/userAuth.dto";
-import { ExceptionMessage } from "../../models/dto/exceptions/exceptionMessage.dto";
+import { UserDto } from "../../models/dto/user.dto";
+import { ExceptionMessageDto } from "../../models/dto/exceptionMessage.dto";
+import { UserService } from "../user/user.service";
 
-const DOM_CHICO_API: string | undefined = process.env.DOM_CHICO_API;
+export class AuthService {
 
-import axios, { AxiosResponse } from "axios";
+    public static async getUserData(id: string): Promise<UserDto | ExceptionMessageDto> {
 
-export async function getUserData(id: string): Promise<UserDataDto | ExceptionMessage> {
+        try {
 
-    try {
+            return await UserService.findByGoogleID(id);
 
-        const result: AxiosResponse = await axios.get(`${process.env.DOM_CHICO_API}/user/google/${id}`);
+        } catch (e) {
 
-        return result.data;
+            return {
+                status: 400,
+                timestamp: new Date().toISOString(),
+                path: `authService/getUserData/${id}`,
+            }
 
-    } catch (e) {
-        return {
-            status: 400,
-            timestamp: Date(),
-            path: 'azar'
         }
     }
-
-
 }

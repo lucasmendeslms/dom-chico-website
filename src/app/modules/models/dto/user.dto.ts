@@ -1,4 +1,4 @@
-export interface UserDataDto {
+export interface UserDto {
     id: number;
     googleAccountId: string;
     name: string;
@@ -7,6 +7,4 @@ export interface UserDataDto {
     email: string;
     type: string;
     picture?: string;
-    session_created_at: number;
-    session_expires_at: number;
 }

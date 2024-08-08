@@ -1,12 +1,10 @@
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Suspense } from "react";
+// import { Suspense } from "react";
 import "./globals.css";
-
-// import { UserProvider } from "./context/userContext";
 import { SessionContext } from "./context/sessionContext";
-import Loading from "./components/loading";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,13 +21,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-      <SessionContext>
-        <Suspense fallback={ <Loading/> }>
-          {/* <UserProvider> */}
+        <SessionContext>
+          {/* <Suspense fallback={ <Loading/> }> */}
             {children}
-          {/* </UserProvider> */}
-        </Suspense>
-      </SessionContext>
+          {/* </Suspense> */}
+        </SessionContext>
       </body>
     </html>
   );

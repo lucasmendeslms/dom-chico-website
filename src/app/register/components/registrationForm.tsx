@@ -9,7 +9,7 @@ import { cpf } from 'cpf-cnpj-validator';
 import { Button } from '@mui/material';
 
 import { UserController } from '@/app/modules/controllers/user.controller';
-import { UserData } from '@/app/modules/models/entities/user.entity';
+import { IUser } from '@/app/modules/models/entities/user.entity';
 import { UserDto } from '@/app/modules/models/dto/user.dto';
 import { ExceptionMessageDto } from '@/app/modules/models/dto/exceptionMessage.dto';
 import { useRouter } from 'next/navigation';
@@ -82,7 +82,7 @@ export default function RegistrationForm({ session }: RegistrationFormPropos) {
 
     try {
 
-      const data: UserData = {
+      const data: IUser = {
         googleAccountId: session?.user.id,
         name: `${firstName} ${lastName}`,
         cpf: CPF,
@@ -98,7 +98,7 @@ export default function RegistrationForm({ session }: RegistrationFormPropos) {
     }
 
     setTimeout(()=> {
-      'googleAccountId' in userInfo ? router.push('/home') : router.push('/error');
+      'googleAccountId' in userInfo ? router.push(`/home`) : router.push('/error');
     }, 3000);
   }
 

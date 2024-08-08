@@ -4,7 +4,7 @@ import { UserService } from "../services/user/user.service";
 
 export class UserController {
 
-    public static async create(data: IUser): Promise<UserDto> {
+    public static async get(data: IUser): Promise<UserDto> {
         return await UserService.create(data);
     }
 

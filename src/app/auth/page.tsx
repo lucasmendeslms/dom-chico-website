@@ -1,19 +1,18 @@
-import { auth } from "../modules/services/auth/authGoogle.service";
-import { UserDto } from "../modules/models/dto/user.dto";
-import { ExceptionMessageDto } from "../modules/models/dto/exceptionMessage.dto";
-import { redirect } from "next/navigation";
-import { Session } from "next-auth";
-import { AuthController } from "../modules/controllers/auth.controller";
+// import { redirect } from "next/navigation";
+// import { AuthController } from "../modules/controllers/auth.controller";
+// import { IAuth } from "../modules/models/entities/auth.entity";
 
-export default async function Auth() {
+// export default async function Auth(): Promise<void> {
 
-    const session: Session | null = await auth();
+//     const getAuth: IAuth = await AuthController.authUser();
 
-    let user: UserDto | ExceptionMessageDto | null = null;
+//     // if (getAuth.isAuthorized && getAuth.hasSession) {
+//     //     redirect(`/home`);
+//     // }
 
-    if (session && session.user && session.user.id) {
-        user = await AuthController.authUser(session.user.id);
-    }
+//     // if (getAuth.hasSession) {
+//     //     redirect('/register');
+//     // }
 
-    user && 'googleAccountId' in user ? redirect(`/user/${user.id}`) : redirect('/register');
-}
+//     getAuth.isAuthorized && getAuth.hasSession ? redirect(`/home`) : redirect('/register');
+// }

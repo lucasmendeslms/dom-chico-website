@@ -1,7 +1,17 @@
+"use client"
+import { Button } from "@mui/material"
+import { useRouter } from "next/navigation"
+
 export default function Error() {
+    const router = useRouter();
+
+    // const handleErrorRedirect
+
     return (
         <>
-            <h1>Se erramos, é tentando acertar</h1>
+            <Button onClick={() => router.push('/home')}>
+                Tente novamente
+            </Button>
         </>
     )
 }

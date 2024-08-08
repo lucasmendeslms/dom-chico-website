@@ -27,7 +27,7 @@ export default function Login () {
                     <GoogleButton
                     type="dark"
                     label="Entre com o Google"
-                    onClick={() => signIn("google", { callbackUrl: "/auth" })}
+                    onClick={() => signIn("google", { callbackUrl: "/home" })}
                     />
                 </div>
             </div>

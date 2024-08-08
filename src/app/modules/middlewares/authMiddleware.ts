@@ -1,42 +1,18 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { Session } from 'next-auth';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+import { auth } from '../services/auth/authGoogle.service';
 
-const allowedOrigins = [process.env.DOM_CHICO_API]
+export async function middleware(req: NextRequest) {
+  const session: Session | null = await auth();
 
-const corsOptions = {
-  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
-}
-
-export function authMiddleware(request: NextRequest) {
-  // Check the origin from the request
-  const origin = request.headers.get('origin') ?? ''
-  const isAllowedOrigin = allowedOrigins.includes(origin)
-
-  // Handle preflighted requests
-  const isPreflight = request.method === 'OPTIONS'
-
-  if (isPreflight) {
-    const preflightHeaders = {
-      ...(isAllowedOrigin && { 'Access-Control-Allow-Origin': origin }),
-      ...corsOptions,
-    }
-    return NextResponse.json({}, { headers: preflightHeaders })
+  if (!session) {
+    return NextResponse.redirect(new URL('/login', req.url));
   }
 
-  // Handle simple requests
-  const response = NextResponse.next()
-
-  if (isAllowedOrigin) {
-    response.headers.set('Access-Control-Allow-Origin', origin)
-  }
-
-  Object.entries(corsOptions).forEach(([key, value]) => {
-    response.headers.set(key, value)
-  })
-
-  return response
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: '/api/:path*',
-}
+  matcher: ['/:path*'], // Protege todas as rotas que começam com /user
+};

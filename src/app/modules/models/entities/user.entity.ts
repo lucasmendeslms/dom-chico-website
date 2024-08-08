@@ -4,13 +4,13 @@ export enum UserType {
     CUSTOMER = "CUSTOMER",
 }
 
-export interface UserData {
+export interface IUser {
     id?: number;
     googleAccountId: string;
     name: string;
     cpf: string;
     phone: string;
     email: string;
-    type?: UserType | UserType.CUSTOMER;
+    type?: string;
     picture?: string;
 }

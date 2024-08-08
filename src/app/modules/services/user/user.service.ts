@@ -1,14 +1,16 @@
 import { UserDto } from "../../models/dto/user.dto";
-import { UserData } from "../../models/entities/user.entity";
+import { IUser } from "../../models/entities/user.entity";
 import { UserType } from "../../models/entities/user.entity";
 import { ExceptionMessageDto } from "../../models/dto/exceptionMessage.dto";
 import axios, { AxiosResponse } from "axios";
+import { ExceptionMessage } from "../../models/entities/exceptionMessage.entity";
 
 export class UserService {
 
-    private static baseURL: string | undefined = `${process.env.NEXT_PUBLIC_API_URL}/user`;
+    private static baseURL: string = `${process.env.NEXT_PUBLIC_API_URL}/users` || '';
+    private static errorPathDefault: string = `${process.env.NEXT_PUBLIC_ERROR_DEFAULT_PATH}` || '';
 
-    public static async findByGoogleID(id: string): Promise<UserDto | ExceptionMessageDto> {
+    public static async findByGoogleID(id: string): Promise<UserDto> {
 
         try {
 
@@ -18,20 +20,17 @@ export class UserService {
 
         } catch (error) {
 
-            if (axios.isAxiosError(error) && error.response?.data) {
-                return error.response.data;
+            if (axios.isAxiosError(error) && error.response) {
+                const errorAxiosMessage: ExceptionMessageDto = error.response.data
+                throw new ExceptionMessage(errorAxiosMessage.status, errorAxiosMessage.message, errorAxiosMessage.path, errorAxiosMessage.timestamp);
+                // throw new ExceptionMessage(errorAxiosMessage.status, errorAxiosMessage.message, errorAxiosMessage.path);
             }
 
-            return ({
-                status: 500,
-                timestamp: new Date().toISOString(),
-                path: `${process.env.ERROR_DEFAULT_PATH}/user/findByGoogleID`,
-                message: "Internal server error",
-            })
+            throw new ExceptionMessage(500, 'Internal server error', `${this.errorPathDefault}/user/findByGoogleID`)
         }
     }
 
-    public static async create(userData: UserData): Promise<UserDto | ExceptionMessageDto> {
+    public static async create(userData: IUser): Promise<UserDto> {
 
         try {
 
@@ -51,21 +50,16 @@ export class UserService {
                 }
             });
 
-            // console.log(result.data)
             return result.data;
 
         } catch (error) {
 
-            if (axios.isAxiosError(error) && error.response?.data) {
-                console.log(error.response.data);
+            if (axios.isAxiosError(error) && error.response) {
+                const errorAxiosMessage: ExceptionMessageDto = error.response.data
+                throw new ExceptionMessage(errorAxiosMessage.status, errorAxiosMessage.message, errorAxiosMessage.path);
             }
 
-            return ({
-                status: 500,
-                timestamp: new Date().toISOString(),
-                path: `${process.env.ERROR_DEFAULT_PATH}/user/create`,
-                message: "Internal server error",
-            })
+            throw new ExceptionMessage(500, 'Internal server error', `${this.errorPathDefault}/user/create`)
 
         }
     }
